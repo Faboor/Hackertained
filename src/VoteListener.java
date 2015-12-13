@@ -10,13 +10,12 @@
 
 import java.io.IOException;
 import java.lang.Math;
-
 import com.leapmotion.leap.*;
 import com.leapmotion.leap.Gesture.State;
 
 class VoteListener extends Listener {
 
-  private int framesCount = 0;
+  // private int framesCount = 0;
   private final double ROLL_THRESHOLD = 37.5;
 
   private java.text.DecimalFormat df = new java.text.DecimalFormat("#.####");
