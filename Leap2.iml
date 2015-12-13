@@ -21,5 +21,32 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="LeapLibrary" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Downloads/New folder/messagebird-api-1.0.5-jar-with-dependencies.jar!/" />
+          <root url="jar://C:/Downloads/New folder/messagebird-api-1.0.5.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://C:/Downloads/New folder/messagebird-api-1.0.5-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://C:/Downloads/New folder/messagebird-api-1.0.5-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/Downloads/New folder" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/Downloads/New folder" />
+        </SOURCES>
+        <jarDirectory url="file://C:/Downloads/New folder" recursive="false" />
+        <jarDirectory url="file://C:/Downloads/New folder" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

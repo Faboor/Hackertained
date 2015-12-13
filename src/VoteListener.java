@@ -43,11 +43,11 @@ class VoteListener extends Listener {
 
    // printData(frame);
     if (frame.hands().isEmpty()) {
-      Main.noHands();
+      Main.inst.noHands();
     }
 
     for (Hand hand : frame.hands()) {
-      Main.tick(getVote(hand), hand.id());
+      Main.inst.tick(getVote(hand), hand.id());
     }
   }
 
