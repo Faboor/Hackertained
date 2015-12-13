@@ -40,38 +40,32 @@ class VoteListener extends Listener {
   }
 
   public void onFrame(Controller controller) {
-    if (framesCount < 100) {
-      framesCount++;
-      return;
-    }
-    framesCount = 0;
-
     Frame frame = controller.frame();
 
-    printData(frame);
+   // printData(frame);
+    if (frame.hands().isEmpty()) {
+      Main.noHands();
+    }
 
-    System.out.println(getVote(frame));
-
-
+    for (Hand hand : frame.hands()) {
+      Main.tick(getVote(hand), hand.id());
+    }
   }
 
-  public Vote getVote(Frame frame) {
-    for (Hand hand : frame.hands()) {
+  public Vote getVote(Hand hand) {
+    double roll = Math.toDegrees(hand.palmNormal().roll());
 
-      double roll = Math.toDegrees(hand.palmNormal().roll());
-      if (hand.isRight()) {
-        roll *= -1;
-      }
-
-      if (roll > ROLL_THRESHOLD) {
-        return Vote.LIKE;
-      } else if (roll < -ROLL_THRESHOLD) {
-        return  Vote.DISLIKE;
-      } else {
-        return Vote.NEUTRAL;
-      }
+    if (hand.isRight()) {
+      roll *= -1;
     }
-    return null;
+
+    if (roll > ROLL_THRESHOLD) {
+      return Vote.LIKE;
+    } else if (roll < -ROLL_THRESHOLD) {
+      return  Vote.DISLIKE;
+    } else {
+      return Vote.NEUTRAL;
+    }
   }
 
   public void printData(Frame frame) {
