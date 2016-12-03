@@ -1,6 +1,5 @@
-/**
- * Created by Acer on 13-Dec-15.
- */
+
+
 public class AlphaChanger {
 
   final TransparentImage image;
